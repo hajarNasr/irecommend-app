@@ -1,0 +1,58 @@
+.password-eye{
+    position: absolute;
+    right: 55px;
+    top:50px;
+}
+.show-password{
+    position: absolute;
+    right: 12%;
+    color: rgb(83, 83, 83);
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 15px;
+}
+.fa-search-icon, 
+.fa-link-icon,
+.fa-location-icon{
+    margin-right: 7px;
+}
+.fa-link-icon,
+.fa-location-icon{
+   color: rgba(99, 97, 8, 0.897);
+}
+
+.icon-color{
+    color: whitesmoke;
+    cursor: pointer;
+}
+.fa-cogs-icon{
+    cursor: pointer;
+    color: rgb(100, 98, 98);
+}
+.red-heart-icon{
+    color: rgb(224, 48, 48);
+}
+.fa-heart-icon{
+    color: rgb(221, 218, 218);
+}
+.red-heart-icon:hover, .fa-heart-icon:hover{
+    cursor: pointer;
+}
+.red-heart-icon, .fa-heart-icon, .fa-comment-icon{
+    font-size: 16px;
+}
+.fa-comment-icon{
+    margin-left: 3px;
+    color: #C9C63A;
+}
+
+.fa-comment-icon:hover{
+    color: rgb(201, 198, 58);
+}
+.fa-arrow-up-icon{
+    font-size: 19px;
+    color: #636060;
+}
+
+

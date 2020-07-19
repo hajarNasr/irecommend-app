@@ -1,0 +1,40 @@
+.tag-inputs-wrapper{
+   margin: 0px;
+   margin-top: -2px;
+   width: 100%;
+   display:inline-block;
+   background-color: white;
+}
+.tag-inputs-wrapper span{
+    color: gray;
+    margin: 3px 0 0 3px;
+    display: block;
+}
+.tag-inputs-wrapper ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    display:inline;
+}
+.tag-inputs-wrapper ul li{
+    border: none;
+    float: left;
+}
+.tag-input {
+    box-sizing: border-box;
+    border: none;
+    margin-top: 4px;
+    padding-left: 3px;
+    font-size: 14px;
+    outline: 0;
+    vertical-align: middle;
+}
+
+.tag {
+    font-size: 15px;
+    font-weight:bold;
+    padding: 3px;
+    color: #7e8181;
+    cursor: pointer;
+}  
+ 

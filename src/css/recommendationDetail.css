@@ -1,0 +1,120 @@
+.comment-obj{
+    width: 90%;
+}
+.comment-content{
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-bottom: 7px ;
+   
+}
+.commenter-profile-img img, .current-user-profile-img img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border-radius: 50%;
+}
+.comment-created_on{
+    width:90%;
+    margin: auto;
+    font-size: smaller;
+}
+
+.comment-form-wrapper{
+    width:90%;
+    margin: auto;
+}
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.comment-form__fist-child{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 56%;
+    margin-top: -10px;
+}
+#comment-textarea{
+    width: 88%;
+    height: 75px;
+    padding: 7px;
+}
+.comment-submit-btn{
+    margin-top: 8px;
+    padding: 3px;
+    width: 10%;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: #a5a322;
+    cursor: pointer;
+}
+.comment-submit-btn:active{
+    transform: translate(0.15em,0.15em);
+    outline: none;
+}
+.leave-a-comment{
+    width: 56%;
+    margin:auto;
+    text-align: end;
+    padding-top: 10px;
+
+}
+.leave-a-comment span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #a5a322;
+  
+}
+.leave-a-comment span:hover{
+    cursor: pointer;
+}
+
+@media(max-width:1100px){
+    .leave-a-comment{
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media(max-width:500px){
+    .comment-form-wrapper{
+        width: 100%;
+    }
+    .comment-form__fist-child{
+        width: 100%;
+    }
+    .comment-submit-btn{
+        width:40%;
+    }
+}
+
+
+@media(min-width:501px) and (max-width:700px){
+    .comment-form-wrapper{
+        width: 90%;
+    }
+    .comment-form__fist-child{
+        width: 100%;
+    }
+    .comment-submit-btn{
+        width:27%;
+    }
+}
+
+@media(min-width:701px) and (max-width:900px){
+    .comment-form-wrapper{
+        width: 60%;
+    }
+    .comment-form__fist-child{
+        width: 100%;
+    }
+    .comment-submit-btn{
+        width:27%;
+    }
+}

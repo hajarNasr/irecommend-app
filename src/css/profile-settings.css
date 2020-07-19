@@ -1,0 +1,99 @@
+.profile-settings-wrapper{
+    width: 48%;
+    margin:auto;
+    margin-top: 30px;
+    border-left: 1px solid rgb(209, 206, 206);
+    border-right: 1px solid rgb(209, 206, 206);
+    min-height: 80vh;
+    overflow: hidden !important;
+}
+.profile-settings-wrapper>*{
+    border-bottom: 1px solid rgb(209, 206, 206);
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+    color: rgba(182, 39, 39, 0.904);
+    font-size: 18px;
+}
+.profile-settings-wrapper div:first-child{
+    color: #858330;
+}
+.change-password-form{
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+}
+.change-password-form label{
+    color: #858330;
+    font-size: 15px;
+}
+.change-password-form label.Mui-focused{
+    color: #858330;
+}
+.change-password-submit-btn{
+    background-color: #858330;
+    box-shadow: 2px 2px 2px #858330;
+}
+.change-password-submit-btn, .delete-account-submit-btn{
+    color: whitesmoke;
+    padding: 5px;
+    width:25%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 15px;
+}
+.delete-account-form{
+    text-align: center;
+}
+.delete-account-form span{
+    display: block;
+    padding: 15px;
+    color: rgba(160, 59, 59, 0.904);
+    font-size: 18px;
+    font-weight: bold;
+}
+.delete-account-form input{
+    width: 85%;
+    margin: auto;
+    height: 30px;
+    padding: 3px;
+    color: rgb(160, 59, 59);
+    font-size: 16px;
+}
+.delete-account-submit-btn{
+    background-color: rgba(160, 59, 59, 0.849);
+    box-shadow: 2px 2px 2px rgba(121, 43, 43, 0.459);
+}
+.delete-account-submit-btn:active{
+    transform: translate(0.15em,0.15em);
+    outline: none;
+}
+.delete-account-submit-btn:hover{
+    background-color: rgb(160, 59, 59);
+  }
+
+.wrong-password{
+    font-size:13px;
+    color: rgb(160, 59, 59);
+    margin-top: 5px;
+}
+@media (max-width:500px){
+    .profile-settings-wrapper{
+        width:98%;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px){
+    .profile-settings-wrapper{
+        width:85%;
+    }
+}
+@media (min-width:701px) and (max-width:1024px){
+    .profile-settings-wrapper{
+        width:60%;
+    }
+}

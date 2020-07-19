@@ -1,0 +1,79 @@
+.main-header{
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    z-index: 100000;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    min-width: 320px;
+    min-height: 50px;
+}
+.main-header__brand{
+    font-size: 1.28rem; 
+    border-bottom: solid 2px rgb(255, 255, 255);
+    font-family:cursive;
+    cursor: pointer;
+ }
+
+ .main-header__sign-btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:22%;
+}
+.brand1{
+    color: #dddd47;
+}
+.brand4{
+    color:rgb(87, 87, 82);
+}
+.login-btn-1{
+    background-color: transparent;
+    color: whitesmoke;
+    border: solid 2px rgba(219, 219, 216, 0.315);
+    background-color: rgba(250, 242, 245, 0.205);
+}
+.signup-btn-4{
+    background-color: rgb(184, 182, 73);
+    color:whitesmoke;
+}
+.login-btn-1, .signup-btn-4{
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(250, 242, 245, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-btn-1:hover{
+    border: none;
+}
+
+@media(max-width:900px){
+    .login-btn-1, .signup-btn-4{
+        width: 93px;
+        height: 32px;
+    }
+}
+@media (max-width:900px){
+    .main-header{
+        width: 90%;
+        margin-top: 20px;
+        margin: auto;
+    }
+    .main-header__brand{
+        font-size: 1.1rem;
+        border-bottom: 2px solid whitesmoke;
+        justify-content: space-between;   
+    }
+}
+@media(min-width:701px) and (max-width:900px){
+    .main-header{
+        width:80%;
+    }
+}

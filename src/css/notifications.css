@@ -1,0 +1,60 @@
+.notifications-wrapprer{
+    width: 48%;
+    margin:auto;
+    margin-top: 15px;
+    border-left: 1px solid rgb(209, 206, 206);
+    border-right: 1px solid rgb(209, 206, 206);
+    padding-bottom: 50px;
+}
+
+.unread{
+    animation-name: fadeIn;
+    animation-duration: 5s;
+}
+.recom-profile-img{
+    width:40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.notification{
+    display: flex;
+    margin-top: 10px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    border-bottom: 1px solid rgba(224, 223, 223, 0.685);
+    color: rgb(78, 76, 76);
+}
+.notification a{
+    text-decoration: none;
+    color:#8B8B2E;
+}
+
+@keyframes fadeIn{
+    from {
+        background-color:rgba(217, 226, 235, 0.425);
+    }
+    to {
+        background-color:#F5F5ED;
+    }
+}
+
+@media (max-width:500px){
+    .notifications-wrapprer{
+        width:98%;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px){
+    .notifications-wrapprer{
+        width:85%;
+    }
+}
+@media (min-width:701px) and (max-width:1024px){
+    .notifications-wrapprer{
+        width:60%;
+    }
+}

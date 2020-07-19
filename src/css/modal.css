@@ -1,0 +1,155 @@
+.modal {
+  display:flex;
+  overflow-y:auto;
+  overflow-x:auto;
+  position:fixed;
+  right:0px;
+  top:0px;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width:100%;
+  height: 100%;
+  }
+  
+  .main-modal {
+    position: absolute;
+    width: 40%;
+    top:20%;
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: #f1f1ee;
+    border-radius: 5px;
+    min-width: 300px;
+    margin-bottom: 30px;
+  }
+  
+  .display-block {
+    display: block;
+    z-index: 999999;
+  }
+  
+  .display-none {
+    display: none;
+  } 
+
+  .overflow-none{
+    margin: 0;
+    height: 100vh; 
+    overflow: hidden;
+  }
+
+  .modal-close-btn{
+    position: absolute;
+    right: 15px;
+    top:10px;
+    cursor: pointer;
+  }
+  .question{
+    font-size: 19px;
+    color: rgb(85, 84, 84);
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+
+  .confirmation-modal-wrapper{
+    padding:20px;
+  }
+  .modal-btns-wrapper{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    float: right;
+  }
+  .yes-btn, .no-btn{
+    width: 45%;
+    height: 30px;
+    border-radius: 3px;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .yes-btn{
+    background-color: rgb(160, 59, 59);
+  }
+
+  .no-btn{
+    background-color: rgb(87, 87, 78);
+  }
+  .no-btn:hover{
+    background-color: rgba(87, 87, 78, 0.733);
+}
+.yes-btn:hover{
+  background-color: rgba(160, 59, 59, 0.849);
+}
+
+.new-recom-btn{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(201, 199, 58, 0.842);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+
+}
+.new-recom-btn:hover{
+  background-color: #B4B21E;
+  cursor: pointer;
+}
+.submitBtnTxt:hover{
+  cursor: pointer;
+}
+
+@media(max-width:500px){
+  .recom-settings-menu{
+    width: 88px;
+ }
+  .main-modal{
+      width: 90%;
+      top:18%;
+  }
+  @media(max-width:350px){
+    .main-modal{
+      top:10%;
+  }
+  }
+  .confirmation-modal-wrapper{
+      padding: 10px;
+  }
+  .modal-btns-wrapper{
+      width: 55%;
+  }
+}
+@media(min-width:501px) and (max-width:700px){
+  .main-modal{
+    width: 75%;
+    top:15%;
+  }
+    .confirmation-modal-wrapper{
+      padding: 5px;
+    }
+    .modal-btns-wrapper{
+      width: 49%;
+      padding-right: 10px;
+  }
+
+}
+
+@media(min-width:701px) and (max-width:900px){
+  .main-modal{
+    width: 65%;
+    top:20%;
+}
+}
+@media(min-width:901px) and (max-width:1250px){
+  .main-modal{
+    width: 50%;
+    top:20%;
+}
+}

@@ -1,0 +1,102 @@
+.signup-form-wrapper, .login-form-wrapper{
+    width: 80%;
+    height: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(187, 185, 79);
+    margin: auto;
+    position: absolute;
+    border-radius: 7px;
+    top: 20px; left: 0; bottom: 0; right: 0;
+    -webkit-box-shadow: -2px 38px 51px 20px rgba(156,151,156,1);
+    -moz-box-shadow: -2px 38px 51px 20px rgba(156,151,156,1);
+         box-shadow: -2px 38px 51px 20px rgba(156,151,156,1);
+}
+
+.w-100{
+    width: 80% !important;
+}
+.signup-right, .signup-left, .login-right, .login-left{
+    width:50%;
+    height: 100%;
+}
+.signup-left, .login-left{
+    display: flex;
+    flex-direction: column;
+}
+.signup-form, .login-form{
+    width: 90%;
+    height: 65%;
+    margin: auto;
+    text-align: center;
+}
+.login-form{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-right{
+      background-image: url('../images/signup-img.png'); 
+      background-size: 100% 100%;
+     
+}
+.login-right{
+    background-image: url('../images/login-img.png'); 
+    background-size: 100% 100%;
+}
+.form-field{
+    position: relative;
+    left: auto;
+    right: auto;
+} 
+.signup__submit-btn, .login__submit-btn{
+    padding: 3px;
+    width:30%;
+    background-color: rgb(83, 83, 83);
+    border-radius: 18px;
+    color: rgb(218, 218, 188);
+    font-size: 18px;
+    cursor: pointer;
+    height: 30px;
+}
+.signup__submit-btn:hover, .login__submit-btn:hover{
+    background-color: rgb(105, 103, 103);
+}
+.login__submit-btn{
+   align-self: center;
+}
+.signup__submit-btn{
+    margin-top: 25px;
+}
+.forgot-password-link{
+    color: rgb(63, 60, 60);
+    text-align: end;
+    width: 80%;
+    margin: auto;
+}
+#login-error, #empty-field-error{
+    margin-bottom: 8px;
+}
+.already-a-member-link, .not-a-member-yet-link{
+   padding: 10px;
+   align-self: flex-end;
+   color: rgb(63, 60, 60);
+   font-size: 15px;
+   background-color: transparent;
+   position: absolute;
+   right: 5px;
+   bottom: 2px;
+}
+.already-a-member-link:hover, .not-a-member-yet-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.error-msg{
+    width:90%;
+    margin: auto;
+    color: rgb(218, 50, 50);
+}
+#login-error{
+    color: rgb(218, 50, 50);
+}

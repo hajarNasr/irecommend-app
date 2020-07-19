@@ -1,0 +1,56 @@
+.recommend-textbox-wrapper{
+    padding: 10px;
+    height: 100%;
+    overflow: auto;
+}
+.recommend-textbox-form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: auto;
+    justify-content: space-between;
+}
+.recommend-submit-textarea{
+   display: block;
+   margin: auto;
+   width: 100%;
+   min-height: 200px;
+   padding:0 7px 7px 7px;
+   border: none;
+   resize: vertical;
+   overflow: hidden;
+   margin-bottom: 0px;
+   margin-top: 15px;
+   color: rgb(88, 88, 88);
+   font-size: 16px;
+   border-bottom: 1.5px solid #f1f1ee;
+}
+.recommend-submit-btn{
+    align-self: center;
+    margin-top: 10px;
+    width:110px;
+    padding:5px;
+    color:whitesmoke;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: rgb(87, 87, 78);
+    box-shadow: 2px 2px 2px rgba(110, 108, 108, 0.288);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.recommend-submit-btn:hover{
+    background-color: rgb(201, 198, 58);
+}
+
+.recommend-submit-btn:active{
+    transform: translate(0.1em,0.1em);
+    outline: none;
+    border: none;
+}
+
+.info{
+    margin-top: 3px;
+    color: gray;
+    font-size: 13px;
+}

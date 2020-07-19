@@ -1,0 +1,4 @@
+.from-input-comp{
+    display: flex;
+    flex-direction: column;
+}

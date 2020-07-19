@@ -1,0 +1,31 @@
+.followers-header{
+    margin:auto;
+    width:80%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+}
+.all-following .recom-wrapper .name-and-content .fullname-and-handler{
+    border: none;
+}
+.all-following a, .all-followers a{
+    text-decoration: none;
+}
+
+@media (max-width:500px){
+    .does-not-exist{
+        width:98%;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px){
+    .does-not-exist{
+        width:85%;
+    }
+}
+@media (min-width:701px) and (max-width:1024px){
+    .does-not-exist{
+        width:60%;
+    }
+}

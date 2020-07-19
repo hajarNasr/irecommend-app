@@ -1,0 +1,18 @@
+.people-search-wrapper{
+    text-align: center;
+    margin:auto;
+}
+
+.people-search-recored{
+   
+    display: flex;
+    margin-top: 15px;
+    padding: 5px;
+}
+.people-search-recored img{
+    width:90px;
+    height: 90px;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}

@@ -1,0 +1,39 @@
+.recom-settings-wrapper{
+    position: relative;
+}
+.recom-settings-menu{
+    position: absolute;
+    font-size: 16.5px;
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2); 
+    z-index: 9999;
+    padding: 8px;
+    padding-top: 15px;
+    border-radius: 3px;
+    right: 1px;
+    cursor: pointer;
+    width: 100px;
+    background-color: #858080;
+    bottom: 5px;
+    color: whitesmoke;
+}
+.recom-settings-menu li:first-child{
+    display: flex;
+    align-items: center;
+}
+.recom-settings-menu li:last-child{
+    border-top: 1px solid rgba(245, 245, 245, 0.397);
+}
+.recom-settings-menu li{
+    padding: 2px;
+}
+.recom-settings-menu a:hover{
+    color: white;
+}
+.recom-settings-menu li:hover{
+    background-color: rgba(245, 245, 245, 0.397);
+}
+
+.edit-btn{
+    background-color: #858080;
+    color: whitesmoke;
+}
