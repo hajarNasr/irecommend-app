@@ -67,6 +67,7 @@ class DeleteFollowersDestroyView(generics.DestroyAPIView):
 
 class UserFollowersListView(generics.ListAPIView):
     permission_classes = (IsAuthenticated,)
+    queryset = User.objects.all()
 
     def get(self, request, username):
         user = User.objects.get(username=username)
@@ -79,7 +80,8 @@ class UserFollowersListView(generics.ListAPIView):
 
 class UserFollowingListView(generics.ListAPIView):
     permission_classes = (IsAuthenticated,)
-
+    queryset = User.objects.all()
+    
     def get(self, request, username):
         user = User.objects.get(username=username)
 
