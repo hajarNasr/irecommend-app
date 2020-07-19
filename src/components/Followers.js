@@ -1,5 +1,6 @@
 import React from 'react';
 import FollowObj from './FollowObj';
+import Spinner from './Spinner';
 import { connect } from 'react-redux';
 import { followersData } from '../store/actions/authActions';
 import { withRouter, Link } from 'react-router-dom';
