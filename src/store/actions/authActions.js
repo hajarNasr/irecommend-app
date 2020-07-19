@@ -358,11 +358,10 @@ const followingDataAction = (data) =>({
 });
 
 export const followingData = (username)=>{
-    const followingDataPath = ROOT_URL;
     const token = getToken();
     return dispatch=>{
         if(token){
-            axios.get(`${followingDataPath}api/${username}/following/`,{
+            axios.get(`/api/${username}/following/`,{
                 headers: {
                     Authorization: 'Token ' + token
                 }
@@ -389,7 +388,7 @@ export const followersData = (username)=>{
     const token = getToken();
     return dispatch=>{
         if(token){
-            axios.get(`${followersDataPath}api/${username}/followers/`,{
+            axios.get(`/api/${username}/followers/`,{
                 headers: {
                     Authorization: 'Token ' + token
                 }
@@ -414,11 +413,10 @@ const recommendationDetailsAction = (details)=>({
 });
 
 export const recommendationDetails = (props)=>{
-    const host = ROOT_URL;
     const { username, recom_id } = props.match.params;
     const token = getToken();
     return dispatch =>{
-        axios.get(`${host}api/${username}/recommendations/${recom_id}/`, {
+        axios.get(`/api/${username}/recommendations/${recom_id}/`, {
             headers: {
                 Authorization: 'Token ' + token
             }
