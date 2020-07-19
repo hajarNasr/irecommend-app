@@ -9,14 +9,12 @@ import '../css/notifications.css';
 class Notifications extends React.Component{
     componentDidMount(){
         this.props.onNotificationsSeen(this.props.currentUserID);
-        console.log("DidMount")
         window.addEventListener("scroll", this.onScroll);
     }
     componentWillMount(){
         this.props.onGettingNotifications(this.props.currentUserID);
     }
     componentWillUnmount() {
-        console.log("WillUnMount")
         window.removeEventListener("scroll", this.onScroll);
     }
     scrollRef = React.createRef();
