@@ -36,7 +36,7 @@ urlpatterns = [
     path('new-notifications-count/<int:pk>/',up_views.get_new_notifications_count, name="new_notifications_count"),
     path('mark/notifications/seen/<int:pk>/', up_views.mark_notifications_as_seen , name="mark_notifications_seen"),
     path('delete/user-account/<int:pk>/<password>/',up_views.delete_account_view, name="delete_account"),
-    re_path('.*', TemplateView.as_view(template_name='index.html')),
+    re_path('', TemplateView.as_view(template_name='index.html')),
 ]
 
 urlpatterns += router.urls

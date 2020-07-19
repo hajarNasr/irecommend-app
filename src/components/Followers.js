@@ -9,21 +9,31 @@ class Followers extends React.Component{
     componentDidMount(){
         this.props.getFollowers(this.props.match.params.username);
     }
-    getFollowers = ()=>(
-        this.props.followersData.map(follower=>
-          <div key={follower.pk} className="all-followers">
-               <Link to={`/${follower.username}/`}><FollowObj obj={follower}/></Link>
-          </div>  
-        )
-    );
+    getFollowers = (data)=>(
+            data.map(follower=>
+                    <div key={follower.pk} className="all-followers">
+                        <Link to={`/${follower.username}/`}><FollowObj obj={follower}/></Link>
+                    </div> 
+            )
+    )
+
     render(){
         return(
             <div>
-               <div className="followers-header">{this.props.match.params.username}'s followers</div>
-                {this.props.isFollowersDataReady &&
-                <div>
-                 {this.getFollowers()}
-                </div>}
+                {this.props.isFollowersDataReady?
+                    this.props.followersData.length?
+                        <div>
+                            <div className="followers-header">{this.props.match.params.username}'s followers</div>
+                            {this.getFollowers(this.props.followersData)}
+                       </div>
+                       :
+                       <div className="m-auto">
+                       {console.log(this.props.followersData)}
+                       No one is following {this.props.match.params.username} yet!
+                       </div>
+                :
+                <div className="m-auto"><Spinner/></div>  
+                }
             </div>
         );
 }

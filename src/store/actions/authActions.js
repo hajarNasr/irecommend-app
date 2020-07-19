@@ -420,6 +420,7 @@ export const recommendationDetails = (props)=>{
             }
         })
             .then(res=>{
+                console.log(res.data)
                 dispatch(recommendationDetailsAction(res.data));
             })
             .catch(error=>{
