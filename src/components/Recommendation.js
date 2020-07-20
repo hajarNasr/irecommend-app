@@ -8,13 +8,16 @@ import RecommendationPreviewer from './RecommendationPreviewer';
 import RcommendationSettings from './RcommendationSettings';
 
 class Recommendation extends React.Component{
+    getImgPath =(imgPath)=>{
+        let path = require(`../../${imgPath}`);
+        return path;
+    }
     render(){
         const { obj } = this.props;
         return(
             <div className="recom-wrapper">
                 <div className="recom-profile-img">
-                
-                    <img src={`${obj.user.profile_img}`}
+                    <img src={this.getImgPath(obj.user.profile_img)}
                         alt=""
                     />
                     {console.log(`${obj.user.profile_img}`)}
