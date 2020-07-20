@@ -9,11 +9,11 @@ class UserProfile(models.Model):
     about       = models.CharField(max_length=255, blank=True, null=True)
     location    = models.CharField(max_length=100, blank=True, null=True)
     website     = models.URLField(blank=True, null=True)
-    profile_img = models.ImageField(upload_to='media',
+    profile_img = models.ImageField(upload_to='build/media',
                                     default="default-images/default-profile-img.png", 
                                     blank=True, 
                                     null=True)
-    header_img  = models.ImageField(upload_to='media', 
+    header_img  = models.ImageField(upload_to='build/media', 
                                     default="default-images/default-header-img.png",
                                     blank=True, 
                                     null=True)
