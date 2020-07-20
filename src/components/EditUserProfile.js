@@ -67,10 +67,10 @@ class EditUserProfile extends React.Component{
                     <form onSubmit={this.handleEditUserProfileSubmit} encType="multipart/form-data" 
                         className="profile-content "
                         multiple = {false}> 
-                        {console.log(this.props)}
                         <div className="profile-content__images">
                             <div style={{ backgroundImage: `url(${this.state.headerImgSrc})`}}
                                 className="profile-content__header-img">
+                                {console.log(this.state.headerImgSrc)}
                                     <label className="pos-abs input-file-type">
                                     <FaCameraIcon/>
                                     <input 
@@ -83,6 +83,7 @@ class EditUserProfile extends React.Component{
                             </div>        
                             <div style={{ backgroundImage: `url(${this.state.profileImgSrc})`}}
                                 className="profile-content__profile-img">
+                                 {console.log(this.state.profileImgSrc)}
                                 <label className="pos-abs input-file-type ">
                                     <FaCameraIcon/>
                                     <input 

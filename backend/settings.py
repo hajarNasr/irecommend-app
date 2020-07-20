@@ -164,13 +164,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT =  os.path.join(BASE_DIR, 'build', 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "media/"),
-    os.path.join(BASE_DIR, "media/default-images/")
-]
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'src/images/media')
 
 MY_EMAIL = 'voilamagicmail@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
