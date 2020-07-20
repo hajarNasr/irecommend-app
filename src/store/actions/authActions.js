@@ -367,8 +367,6 @@ export const followingData = (username)=>{
                 }
             })
             .then(res=>{
-                console.log(res)
-                console.log(res.data)
                 dispatch(followingDataAction(res.data));
             })
             .catch(error=>{
@@ -394,8 +392,6 @@ export const followersData = (username)=>{
                 }
             })
             .then(res=>{
-                console.log(res)
-                console.log(res.data)
                  dispatch(followersDataAction(res.data));
             })
             .catch(error=>{
@@ -422,8 +418,6 @@ export const recommendationDetails = (props)=>{
             }
         })
             .then(res=>{
-                console.log(res)
-                console.log(res.data)
                 dispatch(recommendationDetailsAction(res.data));
             })
             .catch(error=>{
@@ -452,7 +446,7 @@ export const submitNewComment = (newComment) =>{
                 dispatch(submitNewCommentAction(res.data))
             })
             .catch(error=>{
-                console.log(error.response.data)
+                //console.log(error.response.data)
             }) 
         }
     }
@@ -473,8 +467,6 @@ export const searchPeople = (wordToSearch)=>{
             }
        })
        .then(res=>{
-        console.log(res)
-        console.log(res.data)
            dispatch(searchPeopleAction(res.data))
        })
        .catch(error=>{
