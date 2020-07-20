@@ -11,11 +11,11 @@ class UserProfile extends React.Component{
             <div className="profile-wrapper">
             <div className="profile-content">
             <div className="profile-content__images">
-                    <div style={{ backgroundImage: `url(${profileData['header_img']
+                    <div style={{ backgroundImage: `url(../../${profileData['header_img']
                                                     .replace("https://irecommend-app.herokuapp.com","")})` }}
                         className="profile-content__header-img"/>   
-              {console.log(`${profileData['header_img']}`)}
-                    <div style={{ backgroundImage: `url(${profileData['profile_img']})` }}
+              {console.log(`${profileData['header_img'].replace("https://irecommend-app.herokuapp.com","")}`)}
+                    <div style={{ backgroundImage: `url(../../${profileData['profile_img']})` }}
                         className="profile-content__profile-img"/> 
                     {this.props.isCurrentUser?     
                         <div className="edit-profile-btn">
