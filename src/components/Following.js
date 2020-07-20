@@ -24,7 +24,7 @@ class Following extends React.Component{
                     this.props.followingData.length?
                         <div>
                             <div className="followers-header"> People followed by {this.props.match.params.username}</div>
-                            {this.getFollowing()}
+                            {this.getFollowing(this.props.followingData)}
                         </div>
                     :
                     <div className="m-auto">{this.props.match.params.username} is not following anyone yet!</div>  

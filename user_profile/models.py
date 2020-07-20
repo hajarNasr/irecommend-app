@@ -10,11 +10,11 @@ class UserProfile(models.Model):
     location    = models.CharField(max_length=100, blank=True, null=True)
     website     = models.URLField(blank=True, null=True)
     profile_img = models.ImageField(upload_to='media',
-                                    default="default-images/default-profile-img.png", 
+                                    default="src/images/default-images/default-profile-img.png", 
                                     blank=True, 
                                     null=True)
     header_img  = models.ImageField(upload_to='media', 
-                                    default="default-images/default-header-img.png",
+                                    default="src/images/default-images/default-header-img.png",
                                     blank=True, 
                                     null=True)
 

@@ -12,7 +12,7 @@ class Followers extends React.Component{
     }
     getFollowers = (data)=>(
             data.map(follower=>
-                    <div key={follower.pk} className="all-followers">
+                    <div key={follower.pk} className="all-following">
                         <Link to={`/${follower.username}/`}><FollowObj obj={follower}/></Link>
                     </div> 
             )
