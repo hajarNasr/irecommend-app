@@ -17,7 +17,6 @@ class UserProfile extends React.Component{
                     <div style={{ backgroundImage: `url(../../${profileData['profile_img']
                                                       .replace("https://irecommend-app.herokuapp.com","")})` }}       
                         className="profile-content__profile-img"/> 
-                    {console.log(`${profileData['header_img'].replace("https://irecommend-app.herokuapp.com","")}`)}
                     {this.props.isCurrentUser?     
                         <div className="edit-profile-btn">
                         <Link to={`/${profileData.username}/edit-profile/`}>Edit Profile</Link>

@@ -9,7 +9,7 @@ import RcommendationSettings from './RcommendationSettings';
 
 class Recommendation extends React.Component{
     getImgPath =(imgPath)=>{
-        let path = require(`../../${imgPath}`);
+        let path = require(`../..${imgPath}`);
         return path;
     }
     render(){
@@ -20,7 +20,6 @@ class Recommendation extends React.Component{
                     <img src={this.getImgPath(obj.user.profile_img)}
                         alt=""
                     />
-                    {console.log(`${obj.user.profile_img}`)}
                 </div>
                 <div className="name-and-content"> 
                     <div className="fullname-and-handler">
