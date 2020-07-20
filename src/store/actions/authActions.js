@@ -129,7 +129,7 @@ export const ResetPasswordAction = (email, history) =>{
             history.push("/password-reset-email-sent/");
        })
        .catch(error=>{
-           console.log("Error", error.response.data);
+          // console.log("Error", error.response.data);
        })
     }
 }
@@ -552,7 +552,6 @@ export const updateRecommendation = updatedRecommendation =>{
 
     formData.append("content", updatedRecommendation.content);
     formData.append("hashtags", updatedRecommendation.hashtags);
-    console.log(updatedRecommendation.hashtags)
     return dispatch=>{
         if(token){
             axios.patch(`${updateRecommendationPath}/${updatedRecommendation.id}/`, formData ,{
@@ -614,8 +613,6 @@ export const getRecommendationsList = (path)=>{
             }
         })
         .then(res=>{
-            console.log(res)
-            console.log(res.data)
             dispatch(getRecommendationsSuccessAction(res.data))
         })
         .catch(error=>{
