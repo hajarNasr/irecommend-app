@@ -14,10 +14,10 @@ class Recommendation extends React.Component{
             <div className="recom-wrapper">
                 <div className="recom-profile-img">
                 
-                    <img src={`${ROOT_URL}${obj.user.profile_img}`}
+                    <img src={`${obj.user.profile_img}`}
                         alt=""
                     />
-                    {console.log(`${ROOT_URL}${obj.user.profile_img}`)}
+                    {console.log(`${obj.user.profile_img}`)}
                 </div>
                 <div className="name-and-content"> 
                     <div className="fullname-and-handler">

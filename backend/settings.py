@@ -169,7 +169,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MY_EMAIL = 'voilamagicmail@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
