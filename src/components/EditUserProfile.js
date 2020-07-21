@@ -17,8 +17,8 @@ class EditUserProfile extends React.Component{
     state = {
         profileImg:'',
         headerImg: '',
-        profileImgSrc: this.props.profileData.profile_img,
-        headerImgSrc: this.props.profileData.header_img,
+        profileImgSrc: this.props.profileData.profile_img_url,
+        headerImgSrc: this.props.profileData.header_img_url,
     }
 
     handleEditUserProfileSubmit = (e) =>{
