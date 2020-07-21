@@ -26,4 +26,5 @@ export const AuthUrls = {
     NOTIFICATIONS_SEEN: `${ROOT_URL}/mark/notifications/seen`,
     NEW_NOTIFICATIONS_COUNT: `${ROOT_URL}/new-notifications-count`,
     DELETE_ACCOUNT:`${ROOT_URL}/delete/user-account`,
+    UPLOAD_IMG_LINK: 'https://api.Cloudinary.com/v1_1/hajarnasr/image/upload',
 };
