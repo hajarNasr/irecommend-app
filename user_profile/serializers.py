@@ -12,8 +12,13 @@ class UserSerializer(UserDetailsSerializer):
     about     = serializers.CharField(source="userprofile.about",     allow_blank=True, required=False)
     location  = serializers.CharField(source="userprofile.location",     allow_blank=True, required=False)
     website   = serializers.URLField (source="userprofile.website",   allow_blank=True, required=False)
-    profile_img = serializers.ImageField(source="userprofile.profile_img", use_url=True, validators=[img_size])
-    header_img = serializers.ImageField(source="userprofile.header_img",   use_url=True, validators=[img_size])
+    profile_img_url = serializers.CharField(source="userprofile.profile_img_url",   
+                                             allow_blank=True, required=False,
+                                             style={'base_template': 'textarea.html'})
+
+    header_img_url   = serializers.CharField(source="userprofile.header_img_url",   
+                                             allow_blank=True, required=False,
+                                             style={'base_template': 'textarea.html'})
     following_count = serializers.SerializerMethodField()
     followers_count = serializers.SerializerMethodField()
     is_following = serializers.SerializerMethodField()
@@ -30,19 +35,18 @@ class UserSerializer(UserDetailsSerializer):
 
     class Meta(UserDetailsSerializer.Meta):
         fields = UserDetailsSerializer.Meta.fields + ("full_name", "about", "website",
-                                                      "profile_img", "header_img", "location",
+                                                      "profile_img_url", "header_img_url", "location",
                                                        "following_count", "followers_count",
                                                          "is_following")                                             
 
     def update(self, instance, validated_data):
         profile_data = validated_data.pop("userprofile", {})
         full_name = profile_data.get("full_name")
-        email     = profile_data.get("email")
         about     = profile_data.get('about')
         website   = profile_data.get('website')
         location = profile_data.get('location')
-        profile_img = profile_data.get('profile_img')
-        header_img = profile_data.get('header_img')
+        profile_img_url = profile_data.get('profile_img_url')
+        header_img_url = profile_data.get('header_img_url')
 
         instance = super(UserSerializer, self).update(instance, validated_data)
 
@@ -56,12 +60,10 @@ class UserSerializer(UserDetailsSerializer):
                 profile.location = location    
             if website:
                 profile.website = website
-            if profile_img:
-                profile.profile_img = profile_img  
-            if header_img:
-                profile.header_img = header_img     
-            if email:
-                profile.email = email   
+            if profile_img_url:
+                profile.profile_img_url = profile_img_url
+            if header_img_url:
+                profile.header_img_url = header_img_url         
             profile.save()
         return instance             
 
@@ -96,10 +98,12 @@ class UnfollowUserSerializer(serializers.ModelSerializer):
 
 class MiniUserSerializer(UserDetailsSerializer):
     full_name = serializers.CharField(source="userprofile.full_name", allow_blank=True, required=False)
-    profile_img = serializers.ImageField(source="userprofile.profile_img", use_url=True, validators=[img_size])
+    profile_img_url = serializers.CharField(source="userprofile.profile_img_url",   
+                                             allow_blank=True, required=False,
+                                             style={'base_template': 'textarea.html'})
 
     class Meta(UserDetailsSerializer.Meta):
-        fields = ("pk","username","full_name", "profile_img")
+        fields = ("pk","username","full_name", "profile_img_url")
 
 
 class TagsListField(serializers.ListField): 

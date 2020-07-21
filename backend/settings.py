@@ -1,5 +1,5 @@
 import os
-
+import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'notifications',
     'user_profile',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -161,11 +162,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+cloudinary.config(
+  cloud_name = 'hajarnasr',
+  api_key = '941227962771422',
+  api_secret = '9tJS08Dw4ZNkcBymYgWMTDFeu2k',
+  secure = True
+)
+
+
 STATIC_URL = '/static/'
 STATIC_ROOT =  os.path.join(BASE_DIR, 'build', 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'src/images/media').replace('\\', '/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 
 MY_EMAIL = 'voilamagicmail@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

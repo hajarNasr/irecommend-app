@@ -66,3 +66,10 @@ export const checkActionsErrors = (error, history="") =>{
         console.log(error)
     }
 }
+
+export const getCloudinaryLink = (img)=>{
+    const formData = new FormData();
+    formData.append("file", img);
+    formData.append('upload_preset', 'sv0oekek');
+    return formData;
+}

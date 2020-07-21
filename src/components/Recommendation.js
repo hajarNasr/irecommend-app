@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FaCommentIcon } from './FaIcons';
 import { fixDate } from '../helpers/functions';
 import LikeButton from './LikeButton';
-import {ROOT_URL} from '../helpers/urls';
 import RecommendationPreviewer from './RecommendationPreviewer';
 import RcommendationSettings from './RcommendationSettings';
 
@@ -13,10 +12,9 @@ class Recommendation extends React.Component{
         return(
             <div className="recom-wrapper">
                 <div className="recom-profile-img">
-                    <img src={`${obj.user.profile_img}`}
+                    <img src={`${obj.user.profile_img_url}`}
                         alt=""
                     />
-                    {console.log(obj.user.profile_img)}
                 </div>
                 <div className="name-and-content"> 
                     <div className="fullname-and-handler">

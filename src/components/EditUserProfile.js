@@ -8,12 +8,12 @@ import { EditUserProfileAction} from '../store/actions/authActions';
 import '../css/eidt-user-profile.css';
 
 class EditUserProfile extends React.Component{
-    componentWillReceiveProps (nextProps){
+   /*  componentWillReceiveProps (nextProps){
        if (this.props !== nextProps) {
-            this.setState({profileImgSrc:nextProps.profileData["profile_img"], 
-                headerImgSrc:nextProps.profileData["header_img"]});
+            this.setState({profileImgSrc:nextProps.profileData["profile_img_url"], 
+                headerImgSrc:nextProps.profileData["header_img_url"]});
        }
-    }
+    } */
     state = {
         profileImg:'',
         headerImg: '',
@@ -70,7 +70,6 @@ class EditUserProfile extends React.Component{
                         <div className="profile-content__images">
                             <div style={{ backgroundImage: `url(${this.state.headerImgSrc})`}}
                                 className="profile-content__header-img">
-                                {console.log(this.state.headerImgSrc)}
                                     <label className="pos-abs input-file-type">
                                     <FaCameraIcon/>
                                     <input 

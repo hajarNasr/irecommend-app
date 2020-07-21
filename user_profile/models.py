@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from cloudinary.models import CloudinaryField
 User = get_user_model()
 
 
@@ -9,15 +10,11 @@ class UserProfile(models.Model):
     about       = models.CharField(max_length=255, blank=True, null=True)
     location    = models.CharField(max_length=100, blank=True, null=True)
     website     = models.URLField(blank=True, null=True)
-    profile_img = models.ImageField(upload_to='media',
-                                    default="src/images/default-images/default-profile-img.png", 
-                                    blank=True, 
-                                    null=True)
-    header_img  = models.ImageField(upload_to='media', 
-                                    default="src/images/default-images/default-header-img.png",
-                                    blank=True, 
-                                    null=True)
-
+    profile_img_url = models.TextField(null=True, 
+                                      blank=True)  
+    header_img_url =  models.TextField(null=True, 
+                                       blank=True)                                
+                                    
 class Recommendation(models.Model):
     owner      = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recommendations")
     content    = models.TextField()

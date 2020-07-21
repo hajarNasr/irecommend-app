@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as actionTypes from './actionsTypes';
 import { AuthUrls, ROOT_URL } from '../../helpers/urls';
 import { goToLoginPage } from '../../helpers/HomeClickActions';
-import { checkActionsErrors } from '../../helpers/functions';
+import { checkActionsErrors, getCloudinaryLink } from '../../helpers/functions';
 
 export const authStart = ()=>({
     type: actionTypes.AUTH_START,
@@ -240,39 +240,35 @@ export const otherUserProfileDataAction = (props) =>{
 }
 
 export const EditUserProfileAction = (editProfileValues) =>{
-    const userProfilePath = AuthUrls.USER_PROFILE;
-    const formData = new FormData();
-
+    let formData = new FormData();
+    const uploadLink = AuthUrls.UPLOAD_IMG_LINK;
+    const { headerImg, profileImg, history, username} = editProfileValues;
     formData.append("username", editProfileValues.username);
     formData.append("full_name", editProfileValues.fullName);
     formData.append("about", editProfileValues.about);
     formData.append("website", editProfileValues.website)
     formData.append("location", editProfileValues.location)
 
-    if(editProfileValues.profileImg){
-       formData.append("profile_img", editProfileValues.profileImg);
-    }
-    if(editProfileValues.headerImg){
-       formData.append("header_img", editProfileValues.headerImg);
-    }
-    
-    const token = getToken();
     return dispatch =>{
-        if(token){
-           axios.patch(userProfilePath, formData, {
-                headers: {
-                    'content-type': 'multipart/form-data',
-                    authorization: 'Token ' + token
-                }
-           })
-           .then(res=>{
-            editProfileValues.history.push(`/${editProfileValues.username}/`);
-            window.location.reload();
-            
-           })
-           .catch(error=>{
-              checkActionsErrors(error);
-           })
+       if(profileImg && headerImg){
+            const headerFormData = getCloudinaryLink(headerImg)
+            axios.post(uploadLink, headerFormData)
+            .then(res=>{
+                formData.append("header_img_url", res.data.url);
+                axiosImgUpload(profileImg, "profile_img_url", formData, history, username);
+            })
+            .catch(error=>{
+                console.log(error.response)
+            })
+        }
+        else if(profileImg && !headerImg){
+            axiosImgUpload(profileImg, "profile_img_url", formData, history, username);
+        }
+        else if(headerImg && !profileImg){
+            axiosImgUpload(headerImg, "header_img_url", formData, history, username);
+        }
+        else if(!headerImg && !profileImg){
+            axiosEditProfile(formData, history, username)
         }
     }
 }
@@ -770,6 +766,42 @@ export const deleteAccount = (pk, password, history) =>{
     }
 }
 ///////////////////////////////////////////////////////
+
+const axiosEditProfile = (formData, history, username)=>{
+    const token = getToken();
+    const userProfilePath = AuthUrls.USER_PROFILE;
+    if(token){
+        return (axios.patch(userProfilePath, formData, {
+            headers: {
+                'content-type': 'multipart/form-data',
+                authorization: 'Token ' + token
+            }
+       })
+       .then(res=>{
+           history.push(`/${username}/`);
+           window.location.reload();
+        
+       })
+       .catch(error=>{
+          checkActionsErrors(error);
+       })  
+    )
+    }
+}
+
+const axiosImgUpload = (img, name, formData, history, username)=>{
+    const cloudFormData = getCloudinaryLink(img);
+    const uploadLink = AuthUrls.UPLOAD_IMG_LINK;
+
+    axios.post(uploadLink, cloudFormData)
+                    .then(res=>{
+                        formData.append(name, res.data.url);
+                        axiosEditProfile(formData, history, username);
+                    })
+                    .catch(error=>console.log(error))
+}
+
+
 const getToken = ()=>{
     return localStorage.getItem('token');
 }

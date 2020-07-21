@@ -10,7 +10,6 @@ import CommentForm from './CommentForm';
 import { fixDate } from '../helpers/functions';
 import { FaPencilIcon } from './FaIcons';
 import Spinner from './Spinner';
-import {ROOT_URL} from '../helpers/urls';
 import '../css/recommendationDetail.css';
 
 class RecommendationDetail extends React.Component{
@@ -30,7 +29,7 @@ class RecommendationDetail extends React.Component{
         this.props.comments.map(obj=>
             <div key={obj.id} className="recom-wrapper comment-wrapper">
                  <div className="commenter-profile-img">
-                      <img src={`${ROOT_URL}${obj.commenter.profile_img}`}
+                      <img src={`${obj.commenter.profile_img_url}`}
                            alt="" />
                 </div>
                 <div className="comment-obj"> 
