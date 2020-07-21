@@ -254,7 +254,7 @@ export const EditUserProfileAction = (editProfileValues) =>{
             const headerFormData = getCloudinaryLink(headerImg)
             axios.post(uploadLink, headerFormData)
             .then(res=>{
-                formData.append("header_img_url", res.data.url);
+                formData.append("header_img_url", res.data.secure_url);
                 axiosImgUpload(profileImg, "profile_img_url", formData, history, username);
             })
             .catch(error=>{
@@ -795,10 +795,10 @@ const axiosImgUpload = (img, name, formData, history, username)=>{
 
     axios.post(uploadLink, cloudFormData)
                     .then(res=>{
-                        formData.append(name, res.data.url);
+                        formData.append(name, res.data.secure_url);
                         axiosEditProfile(formData, history, username);
                     })
-                    .catch(error=>console.log(error.response))
+                    .catch(error=>console.log(error))
 }
 
 

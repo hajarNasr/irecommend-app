@@ -11,8 +11,8 @@ User = get_user_model()
 def create_profile_for_user(sender, instance=None, created=False, **kwargs):
     if created:
         UserProfile.objects.get_or_create(user=instance,
-                                          header_img_url="http://res.cloudinary.com/hajarnasr/image/upload/v1595339677/iRecommendImages/fhmfrllznr4bvzeazzry.png",
-                                          profile_img_url="http://res.cloudinary.com/hajarnasr/image/upload/v1595339678/iRecommendImages/rdyyo9bgkdkg9ekrzqyf.png")
+                                        header_img_url= "https://res.cloudinary.com/hajarnasr/image/upload/v1595350725/iRecommendImages/abutzvdynkccgau1ef4j.png",
+                                        profile_img_url="https://res.cloudinary.com/hajarnasr/image/upload/v1595350880/iRecommendImages/kkkyq7hluwwvmfuqxqw6.png")
 
 @receiver(post_save, sender=Like)
 def create_new_notification_on_like(sender, instance, created, **kwargs):
