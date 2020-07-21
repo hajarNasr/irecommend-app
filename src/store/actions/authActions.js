@@ -798,7 +798,7 @@ const axiosImgUpload = (img, name, formData, history, username)=>{
                         formData.append(name, res.data.url);
                         axiosEditProfile(formData, history, username);
                     })
-                    .catch(error=>console.log(error))
+                    .catch(error=>console.log(error.response))
 }
 
 

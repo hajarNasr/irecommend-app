@@ -61,6 +61,7 @@ class EditUserProfile extends React.Component{
     }
     render(){
         const userData = this.props.profileData;
+        console.log(userData)
         return(
             <div className="profile-wrapper">
                 <div>
@@ -82,7 +83,6 @@ class EditUserProfile extends React.Component{
                             </div>        
                             <div style={{ backgroundImage: `url(${this.state.profileImgSrc})`}}
                                 className="profile-content__profile-img">
-                                 {console.log(this.state.profileImgSrc)}
                                 <label className="pos-abs input-file-type ">
                                     <FaCameraIcon/>
                                     <input 
