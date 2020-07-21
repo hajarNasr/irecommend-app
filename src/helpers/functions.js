@@ -63,7 +63,7 @@ export const checkActionsErrors = (error, history="") =>{
         }
     }
     else{
-        console.log(error.response)
+        console.log(error.response.data)
     }
 }
 
