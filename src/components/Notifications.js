@@ -27,7 +27,6 @@ class Notifications extends React.Component{
     checkScroll = () =>{
         if(this.state.scrollPos > 0 && this.state.scrollPos > (this.scrollRef.current.offsetTop - 500)){
             this.setState({displayUpBtn:true})
-            console.log(this.props.isLoading)
            if(this.props.next){
                this.props.onLoadingMoreNotifications(this.props.currentUserID, this.state.offset);
                this.setState({currentPage:this.state.offset+10});

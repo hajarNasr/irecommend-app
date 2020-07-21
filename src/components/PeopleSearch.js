@@ -13,7 +13,6 @@ class PeopleSearch extends React.Component{
     getPeople = (people)=>(
             people.map(person=>
             <div key={person.pk} className="all-following">
-            {console.log("XXXXXXXXXXX")}
                <Link to={`/${person.username}/`}><FollowObj obj={person}/></Link>
             </div>   
         )
@@ -22,7 +21,6 @@ class PeopleSearch extends React.Component{
         return(
             this.props.isPeopleSearchResultReady?
                 <div className="people-search-wrapper">
-                {console.log(this.props.peopleSearchData)}
                    {this.props.peopleSearchData.length?
                       this.getPeople(this.props.peopleSearchData)
                       :

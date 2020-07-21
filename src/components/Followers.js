@@ -29,7 +29,6 @@ class Followers extends React.Component{
                        </div>
                        :
                        <div className="m-auto">
-                       {console.log(this.props.followersData)}
                        No one is following {this.props.match.params.username} yet!
                        </div>
                 :

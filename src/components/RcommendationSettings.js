@@ -32,7 +32,6 @@ class RcommendationSettings extends React.Component{
     };
     
     onDeleteRecommendation = ()=>{
-      console.log(this.props)
       this.props.onDeleteRecommendation(this.props.recom.id);
       this.setState({showModal:false});
    }
