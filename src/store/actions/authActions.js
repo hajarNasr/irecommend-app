@@ -792,9 +792,10 @@ const axiosEditProfile = (formData, history, username)=>{
 const axiosImgUpload = (img, name, formData, history, username)=>{
     const cloudFormData = getCloudinaryLink(img);
     const uploadLink = AuthUrls.UPLOAD_IMG_LINK;
-
+    console.log(img)
     axios.post(uploadLink, cloudFormData)
                     .then(res=>{
+                        console.log(res)
                         formData.append(name, res.data.secure_url);
                         axiosEditProfile(formData, history, username);
                     })

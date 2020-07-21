@@ -24,8 +24,6 @@ class EditUserProfile extends React.Component{
     handleEditUserProfileSubmit = (e) =>{
         e.preventDefault();
         const formElements = e.target.elements;
-        console.log("profile",this.state.profileImg)
-        console.log("header",this.state.headerImg)
         const editProfileValues = {
             username: formElements.username.value,
             fullName: formElements['full_name'].value,
