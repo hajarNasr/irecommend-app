@@ -99,7 +99,7 @@ class EditUserProfile extends React.Component{
                                 defaultValue = {userData["full_name"]}
                                 className = "edit-form-input-field"
                                 labelClassName="edit-form-label"
-                                label="First Name"/> 
+                                label="Name"/> 
                             <FormInput 
                                 name = "username"
                                 type="text" 
