@@ -242,5 +242,5 @@ def delete_account_view(request, pk, password):
             return HttpResponse("Wrong password")  
   
 
-def empty_view(request):
+def empty_view(request, uidb64, token):
     return HttpResponse('')
