@@ -54,7 +54,7 @@ class Notifications extends React.Component{
                         let unread = obj.seen? "": this.state.unread;
                         return (<div key={`${obj.id}`} className={`notification ${unread}`}>
                             <div className="recom-profile-img">
-                                <img src={`${ROOT_URL}${obj.user.profile_img}`}
+                                <img src={`${ROOT_URL}${obj.user.profile_img_url}`}
                                         alt=""
                                 />
                             </div>
@@ -64,7 +64,7 @@ class Notifications extends React.Component{
                                     &ensp;{obj.description}
                                     {obj.recommendation?
                                         <Link to={`/${obj.recommendation.user.username}/recommendations/${obj.recommendation.id}`}>
-                                        {obj.recommendation.content}...</Link>
+                                        {obj.recommendation.content.slice(0, 10)}...</Link>
                                         :
                                         ""
                                     }

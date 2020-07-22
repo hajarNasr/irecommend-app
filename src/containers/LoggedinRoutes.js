@@ -57,7 +57,7 @@ class LoggedinRoutes extends React.Component{
 
                     <Route exact path="/:username/recommendations/:recom_id/" 
                                 render={()=><RecommendationDetail 
-                                                    currentUserProfileImg = {profileData.profile_img}
+                                                    currentUserProfileImg = {profileData.profile_img_url}
                                                     currentUserID={profileData.pk}/>}
                                                     />
 
