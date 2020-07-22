@@ -14,7 +14,7 @@ urlpatterns = [
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('account/', include('allauth.urls')),
-    path('password-reset/<uidb64>/<token>/', up_views.empty_view, name='password_reset_confirm'),
+    path('password-reset/<uid>/<token>/', up_views.empty_view, name='password_reset_confirm'),
     path('api/<username>/', up_views.CustomUserDetailView.as_view(), name="user_detail_view" ),
     path('recommendations/<owner>/', up_views.RecommendationRetrieveView.as_view(), name="retrieve_recommendations"),
     path('create/recommendations/<owner>/', up_views.RecommendationCreateView.as_view(), name="create_recommendations"),
