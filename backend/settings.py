@@ -182,9 +182,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = MY_EMAIL
-EMAIL_HOST_PASSWORD = 'jlvik]djlvik]d'
+EMAIL_HOST_PASSWORD = 'jlvik]djlvik]d7'
 
-DEFAULT_FROM_EMAIL = 'voilamagicmail@gmail.com'
+DEFAULT_FROM_EMAIL = ' irecommend.app1.app@gmail.com'
 
 
 import dj_database_url
