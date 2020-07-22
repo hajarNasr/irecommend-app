@@ -19,7 +19,6 @@ ALLOWED_HOSTS = ['irecommend-app.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -33,6 +32,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_auth.registration',
+    'django.contrib.auth',
     'notifications',
     'user_profile',
     'cloudinary',
