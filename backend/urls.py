@@ -11,6 +11,9 @@ router.register('user', up_views.UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('account/', include('allauth.urls')),
     path('api/<username>/', up_views.CustomUserDetailView.as_view(), name="user_detail_view" ),
     path('recommendations/<owner>/', up_views.RecommendationRetrieveView.as_view(), name="retrieve_recommendations"),
     path('create/recommendations/<owner>/', up_views.RecommendationCreateView.as_view(), name="create_recommendations"),
@@ -28,14 +31,10 @@ urlpatterns = [
     path('all/likes/<str:username>/',up_views.AllUserLikesView.as_view(),name="all_user_likes"),
     path('search/people/<str:word_to_search>/',up_views.SearchPeopleRetrieveView.as_view(), name="search_people_view"),
     path('search/hashtag/<str:word_to_search>/',up_views.SearchHashtagRetrieveView.as_view(), name="search_hashtag_view"),
-    path('rest-auth/', include('rest_auth.urls')),
-    path('rest-auth/registration/', include('rest_auth.registration.urls')),
-    path('account/', include('allauth.urls')),
     path('api/notifications/<int:pk>/', up_views.NotificationsListView.as_view(), name='notifications'),
     path('new-notifications-count/<int:pk>/',up_views.get_new_notifications_count, name="new_notifications_count"),
     path('mark/notifications/seen/<int:pk>/', up_views.mark_notifications_as_seen , name="mark_notifications_seen"),
     path('delete/user-account/<int:pk>/<password>/',up_views.delete_account_view, name="delete_account"),
-    path('', include('django.contrib.auth.urls')),
     re_path('', TemplateView.as_view(template_name='index.html')),
 ]
 
