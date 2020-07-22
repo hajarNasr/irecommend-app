@@ -174,7 +174,13 @@ code, pre{
         bottom: 100px;
     }
 }
-@media (min-width:701px) and (max-width:1024px){
+@media (min-width:701px) and (max-width:900px){
+    .recom-wrapper{
+        width:68%;
+    }
+}
+
+@media (min-width:901px) and (max-width:1124px){
     .recom-wrapper{
         width:60%;
     }

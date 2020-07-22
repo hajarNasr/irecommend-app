@@ -200,7 +200,7 @@ class SearchHashtagRetrieveView(generics.ListAPIView):
         
            return self.get_paginated_response(serializer)
         except:
-            return Response([])
+            return JsonResponse({"count":0})
 
 
 class NotificationsListView(generics.ListAPIView):  
@@ -241,6 +241,3 @@ def delete_account_view(request, pk, password):
         else:
             return HttpResponse("Wrong password")  
   
-
-def empty_view(request, uidb64, token):
-    return HttpResponse('')
