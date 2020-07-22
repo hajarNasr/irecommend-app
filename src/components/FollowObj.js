@@ -3,7 +3,7 @@ import React from 'react';
 const FollowObj = (props)=>(
     <div className="recom-wrapper">
         <div className="recom-profile-img">
-           <img src={`http://localhost:8000${props.obj.profile_img_url}`}
+           <img src={`${props.obj.profile_img_url}`}
                alt=""
            />
         </div>
