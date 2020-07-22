@@ -48,7 +48,7 @@ class LoginForm extends React.Component{
                                     type = {this.state.showLoginPassword? "text":"password"}
                             />
                         </div>
-                        <Link to="/reset/user/password/" 
+                        <Link to="/reset/password/" 
                               className="forgot-password-link">
                               Forgot password?
                         </Link> 

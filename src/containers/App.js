@@ -11,9 +11,9 @@ import '../css/index.css';
 const App = ()=>(
     <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/reset/user/password/" component={ResetPassword}/>
+        <Route exact path="/reset/password/" component={ResetPassword}/>
         <Route exact path="/password-reset-email-sent/" component={PasswordResetEmailSent}/>
-        <Route exact path="/rest-auth/:uid/:token/" component={ReasetPasswordConfirm}/>
+        <Route exact path="/password-reset/:uid/:token/" component={ReasetPasswordConfirm}/>
         <LoggedinRoutes/>
         <Route exact path="/unauthorized-access/" component={UnauthorizedAccess}/> 
     </Switch>
