@@ -242,3 +242,5 @@ def delete_account_view(request, pk, password):
             return HttpResponse("Wrong password")  
   
 
+def empty_view(request):
+    return HttpResponse('')
