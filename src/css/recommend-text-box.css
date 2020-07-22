@@ -24,6 +24,8 @@
    color: rgb(88, 88, 88);
    font-size: 16px;
    border-bottom: 1.5px solid #f1f1ee;
+   white-space: pre-line;
+   white-space: pre-wrap;
 }
 .recommend-submit-btn{
     align-self: center;
