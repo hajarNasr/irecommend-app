@@ -154,6 +154,8 @@ export const ResetPasswordConfirm = (password1, password2, props) =>{
            goToLoginPage();
        })
        .catch(error=>{
+           console.log(error)
+           console.log(error.response)
            dispatch(resetPasswordConfirmFail(error));
        });
     }
