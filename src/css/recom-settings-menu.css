@@ -11,7 +11,7 @@
     border-radius: 3px;
     right: 1px;
     cursor: pointer;
-    width: 115px;
+    width: 110px;
     background-color: #858080;
     bottom: 5px;
     color: whitesmoke;
@@ -36,4 +36,10 @@
 .edit-btn{
     background-color: #858080;
     color: whitesmoke;
+}
+
+@media(max-width:500px){
+    .recom-settings-menu{
+        width:113px !important;
+    }
 }
