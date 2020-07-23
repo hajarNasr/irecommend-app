@@ -16,7 +16,7 @@
 .main-header__brand{
     font-size: 1.28rem; 
     border-bottom: solid 2px rgb(255, 255, 255);
-    font-family:cursive;
+    font-family: 'Comic Sans MS';
     cursor: pointer;
  }
 

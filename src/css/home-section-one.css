@@ -17,12 +17,11 @@
 .home-section-1__content h1{
    font-size: 2rem; 
    color: #ecebe5;
-   font-family: cursive;
+   font-family:  'Lucida Sans Unicode', sans-serif;
 }
 .home-section-1__content p{
     font-size: 1.5rem;
     color:#e2e2dc;
-    font-family: cursive;
 }
 .home-section-1__content--words{
     text-align: center;
